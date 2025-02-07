@@ -18,7 +18,22 @@ console.log(calculateSalesTax(500, 0.1));
 // Task 2 - End
 
 // Task 3 - Employee Bonus Calculation
+const calculateBonus = (salary, performanceRating) =>{
+    const bonusRates = {
+        "Excellent": 0.2,
+        "Good": 0.1,
+        "Average": 0.05
+    };
 
+    let bonusPercentage = bonusRates[performanceRating] || 0;
+    if (bonusPercentage === 0) return "No Performance Rating";
+
+    let bonus = salary * bonusPercentage;
+    return `Bonus: $${bonus}`;
+};
+console.log(calculateBonus(5000, "Excellent"));
+console.log(calculateBonus(7000, "Good"));
+console.log(calculateBonus(6000, "Average"));
 // Task 3 - End
 
 // Task 4 - Subscription Pricing Module
