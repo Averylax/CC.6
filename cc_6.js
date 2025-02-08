@@ -12,7 +12,7 @@ console.log(calculateProfit(50, 70, 200)); // Cost Price: $50, Selling Price $70
 // Task 2 - Sales Tax Computation
 const calculateSalesTax = function(amount, taxRate) { // Creates a function to calculate sales tax by using amount and tax rate
     let salesTax = amount * taxRate; // Sales tax is amount times tax rate
-    return `Sales Tax is: $${salesTax}`; // Displays tax rate
+    return `Sales Tax is: $${salesTax.toFixed(2)}`; // Displays tax rate
     };
 console.log(calculateSalesTax(100, 0.07)); // $100, 7% tax rate
 console.log(calculateSalesTax(500, 0.1)); // $500, 10% tax rate
@@ -58,7 +58,12 @@ console.log(calculateSubscriptionCost("Premium", 12, 0)); // Premium tier $20, 1
 // Task 4 - End
 
 // Task 5 - Currency Conversion
-
+function convertCurrency(amount, exchangeRate) { // creates a function to calculate currency 
+    let convertedAmount = amount * exchangeRate; // converted amount is amount * the exchange rate 
+    return `Converted Amount: $${convertedAmount.toFixed(2)}`; // displays the converted amount with 2 decimals
+}
+console.log(convertCurrency(100, 1.1)); // $100 with a 1.1 rate is $110
+console.log(convertCurrency(250, 0.85)); // $250 with a .85 rate is $212.5
 // Task 5 - End
 
 // Task 6 - Higher-Order Function for Bulk Orders
