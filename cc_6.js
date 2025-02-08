@@ -67,7 +67,12 @@ console.log(convertCurrency(250, 0.85)); // $250 with a .85 rate is $212.5
 // Task 5 - End
 
 // Task 6 - Higher-Order Function for Bulk Orders
-
+let orders = [200, 600, 1200, 450, 800]; // Array of numbers
+function applyBulkDiscount(orders, discountFunction) { // Applies a discount to the amounts above $500
+    return orders.map(discountFunction) // Maps the discount to orders above $500
+}
+let discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount); // the "?" is a if-else statement, if the amoumt is above $500 apply discount
+console.log(discountedOrders); // displays the final amount 
 // Task 6 - End
 
 // Task 7 - Business Expense Tracker
