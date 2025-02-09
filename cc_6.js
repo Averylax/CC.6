@@ -76,7 +76,16 @@ console.log(discountedOrders); // displays the final amount
 // Task 6 - End
 
 // Task 7 - Business Expense Tracker
-
+function createExpenseTracker() { // Function that accumulates a running total
+    let totalExpenses = 0; // Starting Expense at $0
+    return function(expense) { // Takes input from tracker and puts it into the function
+        totalExpenses += expense; // New expense added to total expense
+        return `Total Expenses: $${totalExpenses}`; // returns total expense
+    };
+}
+let tracker = createExpenseTracker(); // tracker input
+console.log(tracker(200)); // Tracks $200
+console.log(tracker(150)); // Adds $150 to $200
 // Task 7 - End
 
 // Task 8 - Employee Promotion Evaluation
