@@ -89,5 +89,12 @@ console.log(tracker(150)); // Adds $150 to $200
 // Task 7 - End
 
 // Task 8 - Employee Promotion Evaluation
-
+function calculateYearsToPromotion(employeeLevel1) { // Creates a function to calculate years till a promotion
+    if (employeeLevel1 >= 10) { // If employee 
+        return 0;
+    }
+    return 2 + calculateYearsToPromotion(employeeLevel1 + 1); // Adds 2 years
+}
+console.log(`Years to Level 10: ${calculateYearsToPromotion(7)}`); // Calculates years till promotion
+console.log(`Years to Level 10: ${calculateYearsToPromotion(5)}`); // Calculates years till promotion
 // Task 8 - End
